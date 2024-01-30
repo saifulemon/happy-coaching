@@ -13,6 +13,18 @@
   padding-inline: 1rem;
 }
 
+@media (max-width: 1025px) {
+  .container {
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -32,6 +44,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.gap {
+  gap: 40px;
 }
 
 .primary-btn {

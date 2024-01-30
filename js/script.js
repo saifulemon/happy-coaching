@@ -1,6 +1,6 @@
-let showNavbar = document.querySelector('ul');
-let menuIcon = document.querySelector('.menu-icon');
-let logo = document.querySelector('.logo');
+let showNavbar = document.querySelector("ul");
+let menuIcon = document.querySelector(".menu-icon");
+let logo = document.querySelector(".logo");
 
 // show navbar on mobile
 menuIcon.addEventListener("click", () => {

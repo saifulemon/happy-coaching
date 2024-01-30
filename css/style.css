@@ -3,7 +3,8 @@
 /************** Design Steps *************
 1. google fonts
 2. default style
-5. header
+3. header
+4. hero section
 *****************************************/
 
 /* 1. google fonts */
@@ -35,7 +36,8 @@ body {
   font-weight: 400;
 }
 
-p {
+p,
+span {
   color: #4a556c;
   font-family: "Kumbh Sans";
   font-size: 16px;
@@ -113,14 +115,15 @@ header {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: transparent;
-    top: 80px;
+    background: #fff;
+    top: 55px;
     text-align: center;
     left: -100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: all 0.5s;
+    z-index: 9999;
   }
 
   .navbar-nav ul li {
@@ -140,5 +143,220 @@ header {
 
   .nav-hide-logo {
     display: inline-block;
+  }
+}
+
+/* 4. hero section */
+.hero-sec {
+  width: 100%;
+  height: 677px;
+  background: #faf8f6;
+  padding-top: 55px;
+}
+
+.hero-wrapper.d-flex {
+  align-items: normal !important;
+}
+
+.hr-vector {
+  position: absolute;
+  left: -50px;
+  top: 20px;
+}
+
+.hr-content {
+  display: block;
+  padding-top: 7rem;
+}
+
+.hr-content span {
+  opacity: 0.4;
+}
+
+.hr-title {
+  display: block;
+  width: 45%;
+  color: var(--title-color);
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -0.72px;
+}
+
+.hr-subtitle {
+  display: block;
+  width: 44%;
+  font-size: 18px;
+  line-height: 160%;
+  margin-block: 18px;
+}
+
+.hr-btn a {
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  padding: 0px 32px !important;
+}
+
+.hr-img {
+  position: absolute;
+  right: 85px;
+  top: 75px;
+  width: 462px;
+  height: 576px;
+}
+
+.success-rate {
+  display: flex;
+  justify-content: flex-end;
+  width: 237px;
+  height: 104px;
+  position: absolute;
+  right: 424px;
+  top: 24px;
+  background: #fff;
+  box-shadow: 0px 16px 96px 0px rgba(111, 124, 144, 0.16);
+  padding: 24px;
+  z-index: 9999;
+}
+
+.success-rate img {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  left: 16px;
+}
+
+.rate-content h6 {
+  color: var(--title-color);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.rate-content span {
+  color: var(--txt-clolor);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/********** mobile responsive ***********/
+@media (max-width: 1025px) {
+  .hero-sec {
+    height: 607px;
+  }
+
+  .hr-vector {
+    left: 0px;
+  }
+
+  .hr-title {
+    font-size: 56px;
+  }
+
+  .hr-img {
+    width: 390px;
+    height: 500px;
+    right: 82px;
+    top: 88px;
+  }
+
+  .success-rate {
+    width: 211px;
+    height: 92px;
+    right: 365px;
+    top: 44px;
+  }
+
+  .success-rate img {
+    width: 46px;
+    height: 46px;
+    left: 16px;
+  }
+
+  .rate-content h6 {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper.d-flex {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hr-title,
+  .hr-subtitle {
+    width: 100%;
+  }
+
+  .hr-img {
+    position: static;
+    width: 70%;
+    height: 60%;
+    margin-top: 32px;
+  }
+
+  .success-rate {
+    width: 216px;
+    height: 95px;
+    right: 489px;
+    top: -9px;
+  }
+}
+
+@media (max-width: 426px) {
+  .hero-sec {
+    height: 650px;
+  }
+
+  .hr-title {
+    font-size: 46px;
+  }
+
+  .hr-subtitle {
+    font-size: 16px;
+  }
+
+  .hr-btn a {
+    padding: 0px 15px !important;
+  }
+
+  .hr-img {
+    width: 85%;
+    margin-top: 56px;
+  }
+
+  .success-rate {
+    width: 220px;
+    height: 90px;
+    right: 130px;
+    top: 12px;
+  }
+}
+
+@media (max-width: 376px) {
+  .hero-sec {
+    height: 685px;
+  }
+
+  .success-rate {
+    width: 217px;
+    right: 94px;
+  }
+
+  .hr-img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 321px) {
+  .success-rate {
+    right: 55px;
+  }
+
+  .hr-img {
+    width: 100%;
   }
 }
