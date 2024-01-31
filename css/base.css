@@ -15,7 +15,7 @@
 
 @media (max-width: 1025px) {
   .container {
-    padding-inline: 2rem;
+    padding-inline: 2rem !important;
   }
 }
 
@@ -25,10 +25,8 @@
   }
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-inline: -15px;
+.container-fluid {
+  padding-inline: 60px;
 }
 
 .row-grid {
