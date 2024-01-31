@@ -5,6 +5,7 @@
 2. default style
 3. header
 4. hero section
+5. service section
 *****************************************/
 
 /* 1. google fonts */
@@ -358,5 +359,126 @@ header {
 
   .hr-img {
     width: 100%;
+  }
+}
+
+/* 5. service section */
+.service-wrapper {
+  padding: 96px 100px 61px 100px;
+}
+
+.service-wrapper.d-flex {
+  align-items: normal;
+}
+
+.service-title,
+.service-data {
+  width: 50%;
+}
+
+.service-title .sec-title {
+  margin-block: 1.8rem;
+}
+
+.service-data p {
+  font-size: 17px;
+  padding-inline: 2rem;
+  margin-top: 2.5rem;
+}
+
+.service-card {
+  padding-inline: 132px;
+}
+
+.sc-single-card h4 {
+  margin: 2rem 0 1rem 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/********** mobile responsive ***********/
+@media (max-width: 1025px) {
+  .service-wrapper {
+    padding: 96px 80px 61px 80px;
+  }
+
+  .service-data p {
+    padding-inline: 1rem;
+  }
+
+  .service-card {
+    padding-inline: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-sec {
+    margin-top: 38rem;
+  }
+
+  .service-wrapper.d-flex {
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 0;
+  }
+
+  .service-title,
+  .service-data {
+    width: 100%;
+  }
+
+  .service-card.row-grid {
+    grid-template-columns: auto;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 426px) {
+  .service-sec {
+    margin-top: 24rem;
+  }
+
+  .service-wrapper {
+    padding: 80px 15px 50px 15px;
+  }
+
+  .service-title .sec-title {
+    margin-block: 1rem;
+    font-size: 36px;
+  }
+
+  .service-data p {
+    padding-inline: 0.5rem;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .service-card {
+    padding-inline: 20px;
+  }
+
+  .sc-single-card {
+    text-align: center;
+  }
+}
+
+@media (max-width: 376px) {
+  .service-wrapper {
+    padding: 40px 0px 40px 0px;
+  }
+}
+
+@media (max-width: 321px) {
+  .service-sec {
+    margin-top: 27rem;
+  }
+
+  .service-title .sec-title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .service-card {
+    padding-inline: 0px;
   }
 }

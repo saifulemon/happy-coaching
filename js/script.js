@@ -3,7 +3,7 @@ let menuIcon = document.querySelector(".menu-icon");
 let logo = document.querySelector(".logo");
 
 // show navbar on mobile
-menuIcon.addEventListener("click", () => {
+menuIcon.addEventListener("click", (e) => {
   let shownav = showNavbar.classList.toggle("show");
   document.body.classList.toggle("lock-scroll");
   shownav
