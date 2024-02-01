@@ -10,6 +10,7 @@
 7. blog section
 8. free guide section
 9. cta section
+10. footer section
 *****************************************/
 
 /* 1. google fonts */
@@ -798,5 +799,82 @@ header {
 @media (max-width: 376px) {
   .cta-content button {
     padding-inline: 2rem;
+  }
+}
+
+/* 10. footer section */
+.footer-top {
+  background: #faf8f6;
+}
+
+.ft-wrapper {
+  padding-block: 2.5rem;
+  margin-block: 4rem;
+}
+
+.notified h3 {
+  color: var(--title-color);
+  font-size: 30px;
+  margin-bottom: 1.5rem;
+}
+
+.notified p {
+  font-size: 20px;
+}
+
+.subscribe #email {
+  padding: 11px 30px;
+  width: 250px;
+  box-shadow: 0 0px 7px rgb(0 0 0 / 0.1);
+  margin-right: 10px;
+}
+
+.subscribe button {
+  padding-inline: 32px;
+}
+
+/********** mobile responsive ***********/
+@media (max-width: 1025px) {
+  .ft-wrapper.d-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .ft-wrapper {
+    text-align: center;
+  }
+}
+
+@media (max-width: 426px) {
+  .notified h3 {
+    font-size: 24px;
+  }
+
+  .notified p {
+    font-size: 16px;
+  }
+
+  .subscribe #email {
+    width: 180px;
+  }
+
+  .subscribe button {
+    padding-inline: 10px;
+  }
+}
+
+@media (max-width: 376px) {
+  .subscribe #email {
+    width: 150px;
+  }
+
+  .subscribe button {
+    padding-inline: 5px;
+  }
+}
+
+@media (max-width: 321px) {
+  .subscribe #email {
+    width: 140px;
   }
 }
