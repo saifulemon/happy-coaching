@@ -803,6 +803,12 @@ header {
 }
 
 /* 10. footer section */
+
+/* footer top */
+footer {
+  padding-bottom: 6rem;
+}
+
 .footer-top {
   background: #faf8f6;
 }
@@ -876,5 +882,48 @@ header {
 @media (max-width: 321px) {
   .subscribe #email {
     width: 140px;
+  }
+}
+
+/* footer bottom */
+.fb-wrapper.row-grid {
+  place-items: start;
+}
+
+.fb-logo p {
+  margin-top: 2rem;
+  opacity: 0.5;
+  width: 80%;
+}
+
+.fb-content h6 {
+  font-size: 14px;
+}
+
+.fb-content ul li a {
+  font-size: 14px;
+  color: var(--txt-clolor);
+  opacity: 0.5;
+}
+
+.fb-content ul li a:hover {
+  color: var(--primary-color);
+}
+
+/********** mobile responsive ***********/
+@media (max-width: 426px) {
+  .fb-wrapper.row-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .fb-wrapper,
+  .fb-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .fb-logo p {
+    width: 100%;
   }
 }
