@@ -7,6 +7,7 @@
 4. hero section
 5. service section
 6. review section
+7. blog section
 *****************************************/
 
 /* 1. google fonts */
@@ -194,7 +195,8 @@ header {
   margin-block: 18px;
 }
 
-.hr-btn a {
+.hr-btn a,
+.blog-btn a {
   font-weight: 400 !important;
   line-height: 24px !important;
   padding: 0px 32px !important;
@@ -507,6 +509,7 @@ header {
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
+  cursor: pointer;
 }
 
 .review-card h4 {
@@ -537,6 +540,10 @@ header {
 }
 
 @media (max-width: 768px) {
+  .review-sec {
+    padding-block: 2.5rem;
+  }
+
   .review-sec .container .sec-title {
     width: 90%;
     text-align: center;
@@ -546,5 +553,71 @@ header {
   .review-card h4,
   .review-card h6 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 426px) {
+  .review-sec .container .sec-title {
+    font-size: 36px;
+    width: 100%;
+  }
+}
+
+/* 7. blog section */
+.blog-sec {
+  margin-block: 4rem;
+}
+
+.blog-sec .container .sec-title {
+  text-align: center;
+  margin-inline: auto;
+  width: 50%;
+}
+
+.blog-cards {
+  margin-block: 3rem;
+}
+
+.blog-cards img {
+  width: 100%;
+}
+
+.blog-single-card {
+  box-shadow: 0 0px 7px rgb(0 0 0 / 0.1);
+}
+
+.blog-btn {
+  display: flex;
+  margin-inline: auto;
+}
+
+.blog-card-content {
+  padding: 1.7rem;
+}
+
+.blog-card-content h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-block: 1rem;
+}
+
+/********** mobile responsive ***********/
+@media (max-width: 1025px) {
+  .blog-sec .container .sec-title {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-cards.row-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .blog-sec .container .sec-title {
+    font-size: 36px;
+    width: 100%;
   }
 }
