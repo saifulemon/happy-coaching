@@ -111,6 +111,25 @@ header {
   cursor: pointer;
 }
 
+/* sticky style */
+.page-header.is-sticky {
+  position: fixed;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: slideDown 0.35s ease-out;
+  width: 100%;
+  z-index: 999;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 /********** mobile responsive ***********/
 @media (max-width: 992px) {
   .menu-icon {
@@ -139,16 +158,6 @@ header {
 
   .navbar-nav ul.show {
     left: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-show-logo {
-    display: none;
-  }
-
-  .nav-hide-logo {
-    display: inline-block;
   }
 }
 
@@ -576,10 +585,15 @@ header {
 
 .blog-cards img {
   width: 100%;
+  transition: 0.5s all ease-in-out;
 }
 
 .blog-single-card {
   box-shadow: 0 0px 7px rgb(0 0 0 / 0.1);
+}
+
+.blog-single-card:hover img {
+  transform: scale(0.9);
 }
 
 .blog-btn {
@@ -595,6 +609,12 @@ header {
   font-size: 24px;
   font-weight: 700;
   margin-block: 1rem;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.blog-card-content h4:hover {
+  color: var(--primary-color);
 }
 
 /********** mobile responsive ***********/
@@ -829,9 +849,10 @@ footer {
 }
 
 .subscribe #email {
+  border-radius: 10px;
   padding: 11px 30px;
   width: 250px;
-  box-shadow: 0 0px 7px rgb(0 0 0 / 0.1);
+  border: 1px solid #d0d5dd;
   margin-right: 10px;
 }
 

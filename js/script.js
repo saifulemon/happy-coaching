@@ -1,14 +1,23 @@
 let showNavbar = document.querySelector("ul");
 let menuIcon = document.querySelector(".menu-icon");
 let logo = document.querySelector(".logo");
+const header = document.querySelector(".page-header");
+const toggleClass = "is-sticky";
+
+//  header sticky
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+  if (currentScroll > 150) {
+    header.classList.add(toggleClass);
+  } else {
+    header.classList.remove(toggleClass);
+  }
+});
 
 // show navbar on mobile
 menuIcon.addEventListener("click", (e) => {
   let shownav = showNavbar.classList.toggle("show");
   document.body.classList.toggle("lock-scroll");
-  shownav
-    ? logo.classList.toggle("nav-show-logo")
-    : logo.classList.toggle("nav-hide-logo");
   return shownav;
 });
 
