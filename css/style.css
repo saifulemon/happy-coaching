@@ -8,6 +8,7 @@
 5. service section
 6. review section
 7. blog section
+8. free guide section
 *****************************************/
 
 /* 1. google fonts */
@@ -193,13 +194,6 @@ header {
   font-size: 18px;
   line-height: 160%;
   margin-block: 18px;
-}
-
-.hr-btn a,
-.blog-btn a {
-  font-weight: 400 !important;
-  line-height: 24px !important;
-  padding: 0px 32px !important;
 }
 
 .hr-img {
@@ -618,6 +612,119 @@ header {
 @media (max-width: 426px) {
   .blog-sec .container .sec-title {
     font-size: 36px;
+    width: 100%;
+  }
+}
+
+/* 8. free guide section */
+.free-guide-sec {
+  padding-block: 4rem;
+}
+
+.free-guide-content {
+  flex-basis: 50%;
+}
+
+.free-guide-img {
+  padding-right: 4rem;
+}
+
+.free-guide-content .sec-title {
+  width: 85%;
+  margin-block: 1.5rem;
+}
+
+.free-guide-content span {
+  display: block;
+  width: 75%;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.free-guide-content p {
+  width: 88%;
+}
+
+.free-guide-content button {
+  margin-top: 1.3rem;
+}
+
+.free-guide-circle {
+  width: 96px;
+  height: 96px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -33px;
+  right: -33px;
+}
+
+.free-guide-circle h6 {
+  color: #fff;
+  padding-inline: 5px;
+  font-size: 14px;
+}
+
+/********** mobile responsive ***********/
+@media (max-width: 768px) {
+  .free-guide-sec {
+    padding-top: 0;
+  }
+
+  .free-guide-sec .container .d-flex {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .free-guide-content .sec-title,
+  .free-guide-content span,
+  .free-guide-content p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .free-guide-content button {
+    display: flex;
+    margin-inline: auto;
+  }
+
+  .free-guide-img {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 426px) {
+  .free-guide-content .sec-title {
+    font-size: 36px;
+  }
+
+  .free-guide-img img {
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .free-guide-circle {
+    width: 76px;
+    height: 76px;
+    top: -23px;
+    right: -9px;
+  }
+
+  .free-guide-circle h6 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .free-guide-img img {
     width: 100%;
   }
 }
