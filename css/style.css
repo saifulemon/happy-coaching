@@ -9,6 +9,7 @@
 6. review section
 7. blog section
 8. free guide section
+9. cta section
 *****************************************/
 
 /* 1. google fonts */
@@ -726,5 +727,76 @@ header {
 @media (max-width: 375px) {
   .free-guide-img img {
     width: 100%;
+  }
+}
+
+/* 9. cta section */
+.cta-sec {
+  padding-block: 2rem;
+}
+.cta-wrapper {
+  background: #faf8f6;
+  border-radius: 20px;
+}
+
+.cta-content {
+  padding-left: 3rem;
+}
+
+.cta-content h3 {
+  width: 80%;
+  padding-bottom: 1rem;
+  font-size: 36px;
+  color: var(--title-color);
+}
+
+.cta-content p {
+  font-size: 20px;
+  opacity: 0.4;
+}
+
+.cta-content button {
+  padding: 0.5rem 4rem;
+  margin-top: 2rem;
+}
+
+.cta-img img {
+  display: block;
+  width: 100%;
+  border-radius: 20px !important;
+}
+
+/********** mobile responsive ***********/
+@media (max-width: 768px) {
+  .cta-content h3 {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .cta-content p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 426px) {
+  .cta-wrapper .d-flex {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .cta-content {
+    padding-left: 0;
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  .cta-content h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 376px) {
+  .cta-content button {
+    padding-inline: 2rem;
   }
 }

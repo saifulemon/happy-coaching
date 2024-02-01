@@ -77,7 +77,7 @@
 }
 
 .sec-title {
-  color: #333461;
+  color: var(--title-color);
   font-size: 48px;
   font-style: normal;
   font-weight: 800;
